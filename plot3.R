@@ -1,0 +1,7 @@
+plot(df$Time, df$Sub_metering_1, type = "l",col = "black", xxlab = "",ylab="energy sub metering")
+lines(df$Time, df$Sub_metering_2, col="red")
+lines(df$Time, df$Sub_metering_3, col="blue")
+legend("topright", col =c("black","red","blue"), c("sub_metering_1","sub_metering_2","sub_metering_3"),lty=1)
+dev.copy(png, file = "plot3.png")
+png("plot3.png", width = 480, height = 480)
+dev.off()
